@@ -7,22 +7,41 @@ let completed: boolean = false;
 
 interface Student {
   stdId: number;
-  stdName: string;
+  stdName?: string;
   age?: number;
-  gender: string;
-  course: string;
-  completed: boolean;
+  gender?: string;
+  course?: string;
+  completed?: boolean;
+  //setName (name : string): void;
+  setName: (name: string) => void;
+  //getName: () => string;
 }
 
-function getInfo(id: number): Student {
-  return {
-    stdId: id,
-    stdName: "kim",
-    gender: "female",
-    course: "js",
-    completed: true,
-  };
+//인터페이스는 구현의 개념
+class MyStudent implements Student {
+  stdId = 777;
+  stdName = "lee";
+  age = 30;
+  gender = "male";
+  course = "node.js";
+  completed = true;
+  setName(name: string): void {
+    this.stdName = name;
+    console.log("이름 설정 : " + this.stdName);
+  }
 }
+const myInstance = new MyStudent();
+myInstance.setName("앨리스");
+
+// function getInfo(id: number): Student {
+//   return {
+//     stdId: id,
+//     stdName: "kim",
+//     gender: "female",
+//     course: "js",
+//     completed: true,
+//   };
+// }
 
 function setInfo(student: Student): void {
   console.log(student);
@@ -37,5 +56,5 @@ let std = {
   completed: true,
 };
 
-setInfo(std);
+//setInfo(std);
 // console.log(getInfo(5678));

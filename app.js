@@ -4,15 +4,33 @@ var age = 20;
 var gender = "male";
 var course = "typescript";
 var completed = false;
-function getInfo(id) {
-    return {
-        stdId: id,
-        stdName: "kim",
-        gender: "female",
-        course: "js",
-        completed: true,
+//인터페이스는 구현의 개념
+var MyStudent = /** @class */ (function () {
+    function MyStudent() {
+        this.stdId = 777;
+        this.stdName = "lee";
+        this.age = 30;
+        this.gender = "male";
+        this.course = "node.js";
+        this.completed = true;
+    }
+    MyStudent.prototype.setName = function (name) {
+        this.stdName = name;
+        console.log("이름 설정 : " + this.stdName);
     };
-}
+    return MyStudent;
+}());
+var myInstance = new MyStudent();
+myInstance.setName("앨리스");
+// function getInfo(id: number): Student {
+//   return {
+//     stdId: id,
+//     stdName: "kim",
+//     gender: "female",
+//     course: "js",
+//     completed: true,
+//   };
+// }
 function setInfo(student) {
     console.log(student);
 }
@@ -24,5 +42,5 @@ var std = {
     course: "node.js",
     completed: true,
 };
-setInfo(std);
+//setInfo(std);
 // console.log(getInfo(5678));
