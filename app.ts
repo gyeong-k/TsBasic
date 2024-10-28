@@ -5,11 +5,18 @@ let gender: string = "male";
 let course: string = "typescript";
 let completed: boolean = false;
 
+//열거형 : 사용자 정의 타입
+enum GenderType {
+  Male,
+  Female,
+  GenderNeutral,
+}
+
 interface Student {
   stdId: number;
   stdName?: string;
   age?: number;
-  gender?: string;
+  gender?: GenderType;
   course?: string;
   completed?: boolean;
   //setName (name : string): void;
@@ -22,7 +29,7 @@ class MyStudent implements Student {
   stdId = 777;
   stdName = "lee";
   age = 30;
-  gender = "male";
+  gender = GenderType.Male;
   course = "node.js";
   completed = true;
   setName(name: string): void {

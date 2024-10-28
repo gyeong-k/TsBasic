@@ -4,13 +4,20 @@ var age = 20;
 var gender = "male";
 var course = "typescript";
 var completed = false;
+//열거형 : 사용자 정의 타입
+var GenderType;
+(function (GenderType) {
+    GenderType[GenderType["Male"] = 0] = "Male";
+    GenderType[GenderType["Female"] = 1] = "Female";
+    GenderType[GenderType["GenderNeutral"] = 2] = "GenderNeutral";
+})(GenderType || (GenderType = {}));
 //인터페이스는 구현의 개념
 var MyStudent = /** @class */ (function () {
     function MyStudent() {
         this.stdId = 777;
         this.stdName = "lee";
         this.age = 30;
-        this.gender = "male";
+        this.gender = GenderType.Male;
         this.course = "node.js";
         this.completed = true;
     }
