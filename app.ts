@@ -5,13 +5,24 @@ let gender: string = "male";
 let course: string = "typescript";
 let completed: boolean = false;
 
-function getInfo(id: number): {
+interface Student {
   stdId: number;
   stdName: string;
   age: number;
   gender: string;
   course: string;
   completed: boolean;
-} {
-  return null;
 }
+
+function getInfo(id: number): Student {
+  return {
+    stdId: id,
+    stdName: "kim",
+    age: 20,
+    gender: "female",
+    course: "js",
+    completed: true,
+  };
+}
+
+console.log(getInfo(5678));
