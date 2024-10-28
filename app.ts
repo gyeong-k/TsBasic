@@ -8,7 +8,7 @@ let completed: boolean = false;
 interface Student {
   stdId: number;
   stdName: string;
-  age: number;
+  age?: number;
   gender: string;
   course: string;
   completed: boolean;
@@ -18,11 +18,24 @@ function getInfo(id: number): Student {
   return {
     stdId: id,
     stdName: "kim",
-    age: 20,
     gender: "female",
     course: "js",
     completed: true,
   };
 }
 
-console.log(getInfo(5678));
+function setInfo(student: Student): void {
+  console.log(student);
+}
+
+let std = {
+  stdId: 5555,
+  stdName: "lee",
+  age: 30,
+  gender: "male",
+  course: "node.js",
+  completed: true,
+};
+
+setInfo(std);
+// console.log(getInfo(5678));
