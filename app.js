@@ -55,5 +55,12 @@ var user = {
     name: "john",
     age: 25,
 };
-var anyVal = 100;
-anyVal = "kim";
+var numStr = 100;
+function convertTostring(val) {
+    return String(val); //  값을 string으로 변환
+}
+function convertToNumber(val) {
+    return Number(100); //  값을 number로 변환
+}
+console.log(convertTostring(numStr));
+console.log(convertToNumber(numStr));

@@ -70,5 +70,15 @@ const user: { name: string; age: number } = {
   age: 25,
 };
 
-let anyVal: any = 100;
-anyVal = "kim";
+let numStr: number | string = 100;
+
+function convertTostring(val: number | string): string {
+  return String(val); //  값을 string으로 변환
+}
+
+function convertToNumber(val: number | string): number {
+  return Number(100); //  값을 number로 변환
+}
+
+console.log(convertTostring(numStr));
+console.log(convertToNumber(numStr));
