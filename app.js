@@ -1,3 +1,12 @@
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 var stdId = 1111;
 var stdName = "lee";
 var age = 20;
@@ -86,7 +95,14 @@ function convertToNumber(val) {
 //   console.log(mixedArray[i]);
 // }
 //튜플 : 타입의 순서가 정해져 있다.
-var greeting = [1, "hello", true];
-for (var i = 0; i < greeting.length; i++) {
-    console.log(greeting[i]);
+// let greeting: [number, string, boolean] = [1, "hello", true];
+// for (let i = 0; i < greeting.length; i++) {
+//   console.log(greeting[i]);
+// }
+//Spread 연산자
+var firstArray = [1, 2, 3];
+var secondArray = [4, 5, 6];
+var conbineArray = __spreadArray(__spreadArray([], firstArray, true), secondArray, true);
+for (var i = 0; i < conbineArray.length; i++) {
+    console.log(conbineArray[i]);
 }
