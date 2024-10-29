@@ -94,13 +94,19 @@ function convertToNumber(val: strOrNum): number {
 // console.log(convertTostring(numStr));
 // console.log(convertToNumber(numStr));
 
-let numbers: number[] = [1, 2, 3, 4, 5];
-let fruits: string[] = ["apple", "banana", "orange"];
+// let numbers: number[] = [1, 2, 3, 4, 5];
+// let fruits: string[] = ["apple", "banana", "orange"];
 
-for (let i = 0; i < numbers.length; i++) {
-  console.log(numbers[i]);
-}
+// for (let i = 0; i < numbers.length; i++) {
+//   console.log(numbers[i]);
+// }
 
-for (let i = 0; i < fruits.length; i++) {
-  console.log(fruits[i]);
+// for (let i = 0; i < fruits.length; i++) {
+//   console.log(fruits[i]);
+// }
+
+let mixedArray: (number | string)[] = [1, "two", 3, "four"];
+
+for (let i = 0; i < mixedArray.length; i++) {
+  console.log(mixedArray[i]);
 }
