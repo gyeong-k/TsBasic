@@ -4,22 +4,22 @@
 //클래스
 class Employee {
   //멤버 변수
-  private empName: string;
-  private age: number;
-  private empjob: string;
+  private _empName: string;
+  private _age: number;
+  private _empjob: string;
 
   //생성자 -> 객체 생성시 자동 생성
   //다른 언어에서 생성자는 클래스 이름과 같음
   //this = 객체 자기자신
   constructor(empName: string, age: number, empjob: string) {
-    this.empName = empName;
-    this.age = age;
-    this.empjob = empjob;
+    this._empName = empName;
+    this._age = age;
+    this._empjob = empjob;
   }
 
   printEmp = (): void => {
     console.log(
-      `${this.empName}의 나이는 ${this.age}이고, 직업은 ${this.empjob}입니다.`
+      `${this._empName}의 나이는 ${this._age}이고, 직업은 ${this._empjob}입니다.`
     );
   };
 }
