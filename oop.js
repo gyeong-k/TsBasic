@@ -20,4 +20,5 @@ var Employee = /** @class */ (function () {
 //다른 언어의 생성자는 클래스 이름과 같다는 걸 기억
 //그럼 아래 코드의 Employee는 생성자라고 생각해도 무관
 var employee1 = new Employee("kim", 20, "개발자");
+employee1.empName = "lee"; //  변경 가능 -> 데이터가 외부에 노출돼 있음
 employee1.printEmp();
