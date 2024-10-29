@@ -70,13 +70,15 @@ const user: { name: string; age: number } = {
   age: 25,
 };
 
-let numStr: number | string = 100;
+type strOrNum = number | string;
 
-function convertTostring(val: number | string): string {
+let numStr: strOrNum = 100;
+
+function convertTostring(val: strOrNum): string {
   return String(val); //  값을 string으로 변환
 }
 
-function convertToNumber(val: number | string): number {
+function convertToNumber(val: strOrNum): number {
   return Number(100); //  값을 number로 변환
 }
 
