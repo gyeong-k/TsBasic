@@ -72,9 +72,18 @@ const user: { name: string; age: number } = {
 
 type strOrNum = number | string;
 
-let numStr: strOrNum = 100;
+let numStr: strOrNum = "100";
+let item: number;
 
 function convertTostring(val: strOrNum): string {
+  // item = val;  -> 오류
+
+  //typeof operator
+  if (typeof val === "string") {
+    item = 0;
+  } else {
+    item = val;
+  }
   return String(val); //  값을 string으로 변환
 }
 

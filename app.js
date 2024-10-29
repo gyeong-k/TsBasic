@@ -55,8 +55,17 @@ var user = {
     name: "john",
     age: 25,
 };
-var numStr = 100;
+var numStr = "100";
+var item;
 function convertTostring(val) {
+    // item = val;  -> 오류
+    //typeof operator
+    if (typeof val === "string") {
+        item = 0;
+    }
+    else {
+        item = val;
+    }
     return String(val); //  값을 string으로 변환
 }
 function convertToNumber(val) {
