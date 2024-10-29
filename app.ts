@@ -91,5 +91,16 @@ function convertToNumber(val: strOrNum): number {
   return Number(100); //  값을 number로 변환
 }
 
-console.log(convertTostring(numStr));
-console.log(convertToNumber(numStr));
+// console.log(convertTostring(numStr));
+// console.log(convertToNumber(numStr));
+
+let numbers: number[] = [1, 2, 3, 4, 5];
+let fruits: string[] = ["apple", "banana", "orange"];
+
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
+}
+
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}

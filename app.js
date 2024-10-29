@@ -71,5 +71,13 @@ function convertTostring(val) {
 function convertToNumber(val) {
     return Number(100); //  값을 number로 변환
 }
-console.log(convertTostring(numStr));
-console.log(convertToNumber(numStr));
+// console.log(convertTostring(numStr));
+// console.log(convertToNumber(numStr));
+var numbers = [1, 2, 3, 4, 5];
+var fruits = ["apple", "banana", "orange"];
+for (var i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
+for (var i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
