@@ -105,8 +105,14 @@ function convertToNumber(val: strOrNum): number {
 //   console.log(fruits[i]);
 // }
 
-let mixedArray: (number | string)[] = [1, "two", 3, "four"];
+// let mixedArray: (number | string)[] = [1, "two", 3, "four"];
 
-for (let i = 0; i < mixedArray.length; i++) {
-  console.log(mixedArray[i]);
+// for (let i = 0; i < mixedArray.length; i++) {
+//   console.log(mixedArray[i]);
+// }
+
+//튜플 : 타입의 순서가 정해져 있다.
+let greeting: [number, string, boolean] = [1, "hello", true];
+for (let i = 0; i < greeting.length; i++) {
+  console.log(greeting[i]);
 }

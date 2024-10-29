@@ -81,7 +81,12 @@ function convertToNumber(val) {
 // for (let i = 0; i < fruits.length; i++) {
 //   console.log(fruits[i]);
 // }
-var mixedArray = [1, "two", 3, "four"];
-for (var i = 0; i < mixedArray.length; i++) {
-    console.log(mixedArray[i]);
+// let mixedArray: (number | string)[] = [1, "two", 3, "four"];
+// for (let i = 0; i < mixedArray.length; i++) {
+//   console.log(mixedArray[i]);
+// }
+//튜플 : 타입의 순서가 정해져 있다.
+var greeting = [1, "hello", true];
+for (var i = 0; i < greeting.length; i++) {
+    console.log(greeting[i]);
 }
