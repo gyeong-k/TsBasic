@@ -16,12 +16,11 @@ interface Student {
   stdId: number;
   stdName?: string;
   age?: number;
-  gender?: GenderType;
+  gender?: "male" | "female";
   course?: string;
   completed?: boolean;
-  //setName (name : string): void;
   setName: (name: string) => void;
-  //getName: () => string;
+  getName?: () => string;
 }
 
 //인터페이스는 구현의 개념
@@ -29,7 +28,7 @@ class MyStudent implements Student {
   stdId = 777;
   stdName = "lee";
   age = 30;
-  gender = GenderType.Male;
+  gender: "male" | "female" = "male";
   course = "node.js";
   completed = true;
   setName(name: string): void {
@@ -58,10 +57,15 @@ let std = {
   stdId: 5555,
   stdName: "lee",
   age: 30,
-  gender: "male",
+  gender: "female",
   course: "node.js",
   completed: true,
 };
 
 //setInfo(std);
 // console.log(getInfo(5678));
+
+const user: { name: string; age: number } = {
+  name: "john",
+  age: 25,
+};

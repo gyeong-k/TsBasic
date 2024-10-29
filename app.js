@@ -17,7 +17,7 @@ var MyStudent = /** @class */ (function () {
         this.stdId = 777;
         this.stdName = "lee";
         this.age = 30;
-        this.gender = GenderType.Male;
+        this.gender = "male";
         this.course = "node.js";
         this.completed = true;
     }
@@ -45,9 +45,13 @@ var std = {
     stdId: 5555,
     stdName: "lee",
     age: 30,
-    gender: "male",
+    gender: "female",
     course: "node.js",
     completed: true,
 };
 //setInfo(std);
 // console.log(getInfo(5678));
+var user = {
+    name: "john",
+    age: 25,
+};
