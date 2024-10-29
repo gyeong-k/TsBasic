@@ -69,3 +69,6 @@ const user: { name: string; age: number } = {
   name: "john",
   age: 25,
 };
+
+let anyVal: any = 100;
+anyVal = "kim";

@@ -55,3 +55,5 @@ var user = {
     name: "john",
     age: 25,
 };
+var anyVal = 100;
+anyVal = "kim";
