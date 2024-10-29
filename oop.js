@@ -2,17 +2,16 @@
 //멤버함수 = 메소드
 //클래스
 var Employee = /** @class */ (function () {
-    //생성자 -> 객체 생성시 자동 생성
-    //다른 언어에서 생성자는 클래스 이름과 같음
-    //this = 객체 자기자신
-    function Employee(empName, age, empjob) {
+    //생성자의 파라미터는 암묵적으로 클래스의 맴버변수로 선언됨
+    //동시에 전달 인자로도 사용됨
+    function Employee(_empName, _age, _empjob) {
         var _this = this;
+        this._empName = _empName;
+        this._age = _age;
+        this._empjob = _empjob;
         this.printEmp = function () {
             console.log("".concat(_this._empName, "\uC758 \uB098\uC774\uB294 ").concat(_this._age, "\uC774\uACE0, \uC9C1\uC5C5\uC740 ").concat(_this._empjob, "\uC785\uB2C8\uB2E4."));
         };
-        this._empName = empName;
-        this._age = age;
-        this._empjob = empjob;
     }
     Object.defineProperty(Employee.prototype, "empName", {
         //get/set => 쌍으로 만들어주는게 관례

@@ -3,19 +3,13 @@
 
 //클래스
 class Employee {
-  //멤버 변수
-  private _empName: string;
-  private _age: number;
-  private _empjob: string;
-
-  //생성자 -> 객체 생성시 자동 생성
-  //다른 언어에서 생성자는 클래스 이름과 같음
-  //this = 객체 자기자신
-  constructor(empName: string, age: number, empjob: string) {
-    this._empName = empName;
-    this._age = age;
-    this._empjob = empjob;
-  }
+  //생성자의 파라미터는 암묵적으로 클래스의 맴버변수로 선언됨
+  //동시에 전달 인자로도 사용됨
+  constructor(
+    private _empName: string,
+    private _age: number,
+    private _empjob: string
+  ) {}
 
   //get/set => 쌍으로 만들어주는게 관례
   get empName() {
