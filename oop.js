@@ -14,11 +14,22 @@ var Employee = /** @class */ (function () {
         this._age = age;
         this._empjob = empjob;
     }
+    Object.defineProperty(Employee.prototype, "empName", {
+        //get/set => 쌍으로 만들어주는게 관례
+        get: function () {
+            return this._empName;
+        },
+        set: function (val) {
+            this._empName = val;
+        },
+        enumerable: false,
+        configurable: true
+    });
     return Employee;
 }());
 //객체
 //다른 언어의 생성자는 클래스 이름과 같다는 걸 기억
 //그럼 아래 코드의 Employee는 생성자라고 생각해도 무관
 var employee1 = new Employee("kim", 20, "개발자");
-employee1.empName = "lee"; //  변경 가능 -> 데이터가 외부에 노출돼 있음
+employee1.empName = "lee"; // 클래스 안 set empName 호출
 employee1.printEmp();
